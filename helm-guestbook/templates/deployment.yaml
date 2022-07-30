@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "helm-guestbook.fullname" . }}-2
+  name: {{ template "helm-guestbook.fullname" . }}
   namespace: {{ template "helm-guestbook.name" . }}
   labels:
     app: {{ template "helm-guestbook.name" . }}
