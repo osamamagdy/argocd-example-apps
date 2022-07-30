@@ -9,14 +9,13 @@ metadata:
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    my-lable: Edit-by-Helm
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
-      name: my-port
+      name: http
   selector:
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}

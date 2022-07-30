@@ -9,7 +9,6 @@ metadata:
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    my-lable: Edit-by-Helm
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
