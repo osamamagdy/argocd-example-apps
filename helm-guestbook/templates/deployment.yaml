@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: {{ template "helm-guestbook.fullname" . }}
   namespace: {{ template "helm-guestbook.name" . }}
-  createNamespace: true
   labels:
     app: {{ template "helm-guestbook.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
